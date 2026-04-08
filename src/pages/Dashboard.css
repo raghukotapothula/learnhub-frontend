@@ -1,0 +1,141 @@
+.dashboard-grid-main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: start;
+}
+
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.dash-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.stat-icon {
+  font-size: 2.2rem;
+  background: var(--bg-secondary);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.progress-bar-container {
+  height: 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  transition: width 0.8s ease-out;
+}
+
+.registration-item-full {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.reg-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.reg-actions-flex {
+  display: flex;
+  gap: 15px;
+}
+
+.dashboard-sidebar-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.activity-list, .reminder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-item {
+  display: flex;
+  gap: 15px;
+}
+
+.activity-icon { font-size: 1.2rem; }
+.activity-details p { font-size: 0.9rem; margin: 0; }
+.activity-time { font-size: 0.75rem; color: var(--text-muted); }
+
+.reminder-item-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.reminder-dot {
+  width: 10px;
+  height: 10px;
+  background: #f59e0b;
+  border-radius: 50%;
+}
+
+.reminder-title { font-size: 0.85rem; font-weight: 700; margin: 0; }
+.reminder-time { font-size: 0.75rem; color: var(--text-muted); }
+
+@media (max-width: 1024px) {
+  .dashboard-grid-main { grid-template-columns: 1fr; }
+  .dashboard-side-col { order: 1; }
+  .dashboard-main-col { order: 2; }
+}
+
+@media (max-width: 768px) {
+  .dash-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .registration-item-full { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .reg-actions-flex { width: 100%; }
+  .reg-actions-flex .btn { flex: 1; }
+}
+
+@media (max-width: 480px) {
+  .dash-stats-grid { grid-template-columns: 1fr; }
+}
